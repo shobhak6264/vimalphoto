@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Unifab Technologies Pvt Ltd</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/oie_ggZHKFCbKgGT.png" rel="icon">
+  <link href="assets/img/oie_ggZHKFCbKgGT.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/timeline.scss" rel="stylesheet">
+  <style>
+   
+
+ .checkcaption {
+	 text-align: center;
+	 margin-top: 10px;
+}
+ .check {
+	 width: 60px;
+	 height: 30px;
+	 border: #222 solid 2px;
+	 position: relative;
+	 margin: 10px auto;
+	 border-radius: 15px;
+}
+ .check input {
+	 visibility: hidden;
+	 height: 30px;
+	 width: 60px;
+}
+ .check label {
+	 display: block;
+	 width: 20px;
+	 height: 20px;
+	 border-radius: 50%;
+	 background-color: #e74c3c;
+	 cursor: pointer;
+	 position: absolute;
+	 top: 18%;
+	 left: 12%;
+	 transition: all 0.3s ease;
+}
+ .check input:checked + label {
+	 left: 55%;
+	 background-color: #7b3;
+}
+ div#timeline {
+	 background-color: #6ab0de;
+	 margin-top: 150px;
+	 height: 10px;
+	 width: 100%;
+	 position: relative;
+}
+ div#timeline .inside {
+	 position: absolute;
+	 height: 4px;
+	 background-color: #fff;
+	 width: 0%;
+	 top: 3px;
+	 left: 0;
+}
+ div#timeline .dot {
+	 z-index: 99;
+	 transition: 0.3s ease-in-out;
+	 width: 40px;
+	 height: 40px;
+	 border-radius: 50%;
+	 position: absolute;
+	 top: -15px;
+	 text-align: center;
+	 cursor: pointer;
+}
+ div#timeline .dot:nth-child(1) {
+	 left: 0%;
+	 background-color: #2c3e50;
+}
+ div#timeline .dot:nth-child(2) {
+	 left: 20%;
+	 background-color: #e74c3c;
+}
+ div#timeline .dot:nth-child(3) {
+	 left: 40%;
+	 background-color: #7b3;
+}
+ div#timeline .dot:nth-child(4) {
+	 left: 60%;
+	 background-color: #20638f;
+}
+div#timeline .dot:nth-child(5) {
+	 left: 80%;
+	 background-color: #8f2061;
+}
+div#timeline .dot:nth-child(6) {
+	 left: 100%;
+	 background-color: #778f20;
+}
+div#timeline .dot:nth-child(7) {
+	 left: 60%;
+	 background-color: #c5a99e;
+}
+div#timeline .dot:nth-child(8) {
+	 left: 70%;
+	 background-color: #040504;
+}
+div#timeline .dot:nth-child(9) {
+	 left: 80%;
+	 background-color: #6c208f;
+}
+div#timeline .dot:nth-child(10) {
+	 left: 90%;
+	 background-color: #8f3120;
+}
+
+
+ div#timeline .dot:hover {
+	 transform: scale(1.2);
+}
+ div#timeline .dot date {
+	 font-family: roboto;
+	 font-size: 1.1rem;
+	 display: block;
+	 position: relative;
+	 top: -60px;
+	 text-align: center;
+	 color: #fff;
+}
+ div#timeline .dot span {
+	 display: inline-block;
+	 margin-top: 10px;
+	 width: 20px;
+	 height: 20px;
+	 background-color: #fff;
+	 position: relative;
+	 border-radius: 50%;
+	 box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+ article {
+	 display: none;
+	 position: absolute;
+   top: 30px;
+   width:200px;
+   height:200px;
+	 background-color: #fff;
+	 padding: 20px;
+	 margin: auto;
+}
+ article date {
+	 display: block;
+	 text-align: right;
+}
+ article h2 {
+	 font-family: merriweather, sans-serif;
+	 font-size: 20px;
+	 padding: 10px 0;
+	 border-bottom: solid #111 2px;
+	 margin-bottom: 20px;
+}
+ article p {
+	 line-height: 130%;
+}
+ div.mask {
+	 display: none;
+	 left: 0;
+	 top: 0;
+	 position: fixed;
+	 width: 100%;
+	 height: 100%;
+	 background-color: rgba(0, 0, 0, 0.7);
+	 z-index: 99999;
+}
+ div.mask article {
+	 position: relative;
+	 top: -100%;
+	 margin-top: 50px;
+	 max-width: 960px;
+	 background-color: rgb(15, 15, 15);
+	 padding: 20px;
+	 margin: auto;
+	 box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+}
+ div.mask article date {
+	 display: block;
+	 text-align: right;
+}
+ div.mask article h2 {
+	 font-family: merriweather, sans-serif;
+	 font-size: 5rem;
+	 padding: 10px 0;
+	 border-bottom: solid #111 2px;
+	 margin-bottom: 20px;
+}
+ div.mask article p {
+	 line-height: 130%;
+}
+ 
+
+
+.section timelines {
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+}
+.section timelines:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 0 0 0 -1px;
+  width: 2px;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+}
+.section timelines article {
+  width: 100%;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+.section timelines article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.section timelines article div.inners {
+  width: 40%;
+  float: left;
+  margin: 5px 0 0 0;
+  border-radius: 6px;
+}
+.section timelines article div.inners span.dates {
+  display: block;
+  width: 60px;
+  height: 50px;
+  padding: 5px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -32px;
+  border-radius: 100%;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: #25303B;
+  color: rgba(255,255,255,0.5);
+  border: 2px solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 0 7px #25303B;
+}
+.section timelines article div.inners span.dates span {
+  display: block;
+  text-align: center;
+}
+.section timelines article div.inners span.dates span.days {
+  font-size: 10px;
+}
+.section timelines article div.inners span.dates span.months {
+  font-size: 18px;
+}
+.section timelines article div.inners span.dates span.years {
+  font-size: 10px;
+}
+.section timelines article div.inners h2 {
+  padding: 15px;
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  border-radius: 6px 6px 0 0;
+  position: relative;
+}
+.section timelines article div.inners h2:after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  right: -5px;
+  	width: 10px; 
+	  height: 10px;
+  -webkit-transform: rotate(-45deg);
+}
+.section timelines article div.inners p {
+  padding: 15px;
+  margin: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #656565;
+  border-radius: 0 0 6px 6px;
+}
+.section timelines article:nth-child(2n+2) div.inners {
+  float: right;
+}
+.section timelines article:nth-child(2n+2) div.inners h2:after {
+  left: -5px;
+}
+.section timelines article:nth-child(1) div.inners h2 {
+  background: #e74c3c;
+}
+.section timelines article:nth-child(1) div.inners h2:after {
+  background: #e74c3c;
+}
+.section timelines article:nth-child(2) div.inners h2 {
+  background: #2ecc71;
+}
+.section timelines article:nth-child(2) div.inners h2:after {
+  background: #2ecc71;
+}
+.section timelines article:nth-child(3) div.inners h2 {
+  background: #e67e22;
+}
+.section timelines article:nth-child(3) div.inners h2:after {
+  background: #e67e22;
+}
+.section timelines article:nth-child(4) div.inners h2 {
+  background: #1abc9c;
+}
+.section timelines article:nth-child(4) div.inners h2:after {
+  background: #1abc9c;
+}
+.section timelines article:nth-child(5) div.inners h2 {
+  background: #9b59b6;
+}
+.section timelines article:nth-child(5) div.inners h2:after {
+  background: #9b59b6;
+}
+
+    </style>
+</head>
+
+<body>
+
+  
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      
+     <a href="index.html" class="logo mr-auto"><img src="assets/img/logo-removebg-preview.png" alt="" width="190" height="190" class="img-fluid"></a>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">How we Work</a></li>          
+          <li><a href="#projects">Our Projects</a></li>
+          <li><a href="#clients">Our Clients</a></li>
+          <li><a href="#team">Our Team</a></li>          
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-left" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Unifab <span>Technologies</span></h1>
+          <h2>Achieving Better Systems</h2>
+          <p class="font-italic">
+            Process Automation,Building Automation,Software Development and Communication Systems
+          </p>
+          
+          
+        </div>
+        <!--<div class="col-lg-4 d-flex align-items-center justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+          <a href="https://www.youtube.com/watch?v=GlrxcuEDyF8" class="venobox play-btn" data-vbtype="video" data-autoplay="true"></a>
+        </div>-->
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="d-none d-sm-block col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+            <div class="about-img">
+              <img src="assets/img/tab.jpg" alt="">
+            </div>
+            <div class="d-sm-none">
+              <img src="assets/img/tab.jpg" width="150" height="150" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h3>About Us</h3>
+            <p class="font-italic">
+              Established in Singapore in 2004, Unifab Technologies Pvt Ltd is committed to helping our customers meet their business goals, through better Automation & Communication systems. Unifab’s breadth of experience & expertise in Process Automation, Building Automation, Software Development and Communication Systems, helps relieve our customers’ system design & implementation related pain points. Unifab also leverages this proficiency to support our clients in smoothly deploying IoT (Internet of Technologies) and Industry 4.0 solutions.
+            </p>
+            
+            <!--<ul>
+              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+            </ul>-->
+            <div class="section-title" style="margin-top: 50px;">
+            <h2>Our Mission</h2>
+            </div>
+            <p>
+              Through our emphasis on customer’s satisfaction, we have built an excellent reputation as trusted partner in the Automation Industry. We are a dynamic and aggressive team, comprising of Industry Veteran Directors, Hands-on Engineers and Domain Expert Advisors, all with commitment and drive to focus on our clients’ needs in enhancing and achieving better Systems.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+<!-- ======= Why Us Section ======= -->
+<section id="work" class="why-us">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>How we Work</h2>
+      <p>What do we Do?</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="box" data-aos="zoom-in" data-aos-delay="100">
+          <span>01</span>
+          
+          
+          <i class="icofont-flask"></i><h4>Test</h4>
+         
+          <p>Precised and full automation to enhance the user experience and rectify the problems occured</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="box" data-aos="zoom-in" data-aos-delay="200">
+          <span>02</span>
+          <i class="icofont-fire"></i><h4>Light Up</h4>
+          <p>Ignite your work to bring up new innovative ideas and brand yourself in the market</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="box" data-aos="zoom-in" data-aos-delay="300">
+          <span>03</span>
+          <i class="icofont-ui-flight"></i><h4>Fly High</h4>
+          <p>Scale Up your ideas and thoughts to enlarge the working platform and mark your products to the latest ideas and technologies</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="row" style="margin-top: 100px;">
+
+      <div class="col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+        <h4 style="text-align: center;">Unifab Expertise</h4>
+        <img src="assets/img/unifabexpertise.png" class="img-fluid" alt="">
+      </div>
+
+      
+      <div class="col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+        <h4 style="text-align: center;">Unifab Organization</h4>
+        <img src="assets/img/unifaborganisation.png" class="img-fluid" alt="">
+      </div>
+
+
+    </div>
+
+  </div>
+</section><!-- End Why Us Section -->
+<section id="projects" class="timeline" >
+  <div class="container">
+  <div class="section-title" data-aos="fade-up" data-aos-delay="100">
+    <h2>Timeline</h2>
+    <p>Our Projects</p>
+  </div>
+
+  <!--<p class="checkcaption">no modal boxes?</p>
+<div class="check">
+	<input type="checkbox" id="switch1" name="switch1" class="switch" />
+	<label for="switch1"></label>
+</div>-->
+
+<div id="timeline" data-aos="fade-right" data-aos-delay="200">
+	<div class="dot" id="one">
+		<span></span>
+		<date>2011</date>
+	</div>
+  <!--<div class="dot" id="two">
+		<span></span>
+		<date>2012</date>
+	</div>-->
+  <div class="dot" id="three">
+		<span></span>
+		<date>2013</date>
+	</div>
+  <div class="dot" id="four">
+		<span></span>
+		<date>2014</date>
+  </div>
+  <div class="dot" id="five">
+		<span></span>
+		<date>2015</date>
+  </div>
+  <!--<div class="dot" id="six">
+		<span></span>
+		<date>2016</date>
+  </div>-->
+  <div class="dot" id="seven">
+		<span></span>
+		<date>2017</date>
+  </div>
+  <!--<div class="dot" id="eight">
+		<span></span>
+		<date>2018</date>
+  </div>
+  <div class="dot" id="nine">
+		<span></span>
+		<date>2019</date>
+  </div>-->
+  <div class="dot" id="ten">
+		<span></span>
+		<date>2020</date>
+	</div>
+  <div class="inside"></div>
+</div>
+
+<!-- Modals -->
+
+<article class='modal one'>
+  <date>2011</date>
+  <h2>Projects:</h2>
+  <p>
+    <ul>
+      <i class="icofont-check-circled"></i> 2011 to 2012:  Design (based on IEC 61508 –SIL1 and SIL2) and implementation of Communication System for Woodsville Tunnel Vehicular Tunnel Project. Design and Implementation of Radio system, Telephony systems, CCTV system, Automatic Incident Detection system Network Backbone system, Integrated Voice Recording system, Intrusion Alarm System. </br>
+      <i class="icofont-check-circled"></i> 2011 to 2013:  Upgrading Communication system for CTE Tunnel (Year 2011 to 2013). Design and implementation of Network Backbone system, Telephony systems and Integrated Voice Recording system.</br>
+      <i class="icofont-check-circled"></i> 2011 to 2013:  Upgraded Plant Management system for CTE Tunnel.</br>
+    </ul>
+  </p>
+</article>
+
+<article class='modal two'>
+  <date>2012</date>
+  <h2>No projects have started on this timeline</h2>
+  
+</article>
+
+<article class='modal three'>
+  <date>2013</date>
+  <h2>Projects:</h2>
+  <p>
+    <ul>
+      <i class="icofont-check-circled"></i> 2013 to 2015:  Designed (based on IEC 61508 –SIL2) and Developed of Tunnel Lighting system (SCADA and PLC programming) for Sentosa Gateway Tunnel Project.</br>
+      <i class="icofont-check-circled"></i> 2013 to 2015:  Functional Design Specification, Development of Supervisory Control and Data acquisition System (SCADA) for 12 stations under Down Town Line2 MRT Stations. </br>
+      
+    </ul>
+  </p>
+</article>
+
+<article class='modal four'>
+  <date>2014</date>
+  <h2>Projects:</h2>
+  <p>
+    <ul>
+      <i class="icofont-check-circled"></i> 2014 to 2015:   Development of SCADA for Tuas Depot Project.</br>
+      <i class="icofont-check-circled"></i> 2014 to 2015:   Developed of SCADA for 4 Stations at Tuas MRT Extension Project.</br>
+      <i class="icofont-check-circled"></i> 2014 to 2015:  Developed SCADA and PLC programming for Jurong Water Reclamation Plant.</br>
+    </ul>
+  </p>
+</article>
+
+<article class='modal five'>
+  <date>2015</date>
+  <h2>Projects:</h2>
+  <p>
+    <ul>
+      <i class="icofont-check-circled"></i> 2015 to 2020:  Design and implementation of Communication System for Kallang PayaLebar Vehicular Tunnel Project. Design and implementation of Radio system, Public Address systems, Telephony systems, SDH Network Backbone system, Integrated Voice Recording system. </br>
+     </ul>
+  </p>
+</article>
+
+<article class='modal six'>
+  <date>2016</date>
+  <h2>No projects have been started on this timeline</h2>
+ 
+</article>
+
+<article class='modal seven'>
+  <date>2017</date>
+  <h2>Projects:</h2>
+  <p>
+    <ul>
+      <i class="icofont-check-circled"></i> April 2017:  Design, Implementation and Testing & Commissioning Building Management System (BMS) for  Expo Depot ( LTA) Project using Mitsubishi PLC and iFix ver 5.8  SCADA.</br>
+     </ul>
+  </p>
+</article>
+
+<article class='modal eight'>
+  <date>2018</date>
+  <h2>No projects have been started on this timeline</h2>
+</article>
+
+<article class='modal nine'>
+  <date>2019</date>
+  <h2>No projects have been started on this timeline</h2>
+</article>
+
+<article class='modal ten'>
+  <date>2020</date>
+  <h2>Projects:</h2>
+  <p>
+    <ul>
+      <i class="icofont-check-circled"></i> Completion by Dec 2021:  Installing Water mist system & Control system for KPE and CTE tunnels. Design, Implementation and Testing & commissioning. Using Mitsubishi PLC and iFix ver 5.8  SCADA. </br>
+      <i class="icofont-check-circled"></i> Completion by Dec 2022:  Designed (based on IEC 61508 –SIL1) and implemented Plant Management and Control system and Fallback Control Panel for Woodsville Tunnel Vehicular Tunnel.</br>
+      <i class="icofont-check-circled"></i> Completion by Dec 2024:  Executing Thomson East coast line (TEL stage 4 and 5) MRT, High voltage Power system.  Control and monitoring system using Siemens PLC.</br>
+     </ul>
+  </p>
+</article>
+
+</div>
+  
+</section>
+<!--<section  class="d-sm-block timelines">
+  <div class="section-title">
+    <h2>Timeline</h2>
+    <p>Our Projects</p>
+  </div>
+  <article>
+    <div class="inners">
+      <span class="dates">
+        <span class="days">30<sup>th</sup></span>
+        <span class="months">Jan</span>
+        <span class="years">2014</span>
+      </span>
+      <h2>The Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+    </div>
+  </article>
+  <article>
+    <div class="inners">
+      <span class="dates">
+        <span class="days">26<sup>th</sup></span>
+        <span class="months">Jan</span>
+        <span class="years">2014</span>
+      </span>
+      <h2>The Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+    </div>
+  </article>
+  <article>
+    <div class="inners">
+      <span class="dates">
+        <span class="days">26<sup>th</sup></span>
+        <span class="months">Jan</span>
+        <span class="years">2014</span>
+      </span>
+      <h2>The Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+    </div>
+  </article>
+  <article>
+    <div class="inners">
+      <span class="dates">
+        <span class="days">26<sup>th</sup></span>
+        <span class="months">Jan</span>
+        <span class="years">2014</span>
+      </span>
+      <h2>The Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+    </div>
+  </article>
+  <article>
+    <div class="inners">
+      <span class="dates">
+        <span class="days">26<sup>th</sup></span>
+        <span class="months">Jan</span>
+        <span class="years">2014</span>
+      </span>
+      <h2>The Title</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis rutrum nunc, eget dictum massa. Nam faucibus felis nec augue adipiscing, eget commodo libero mattis.</p>
+    </div>
+  </article>
+</section>-->
+
+
+<!-- ======= Gallery Section ======= -->
+<section id="clients" class="gallery">
+
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Our Clients</h2>
+      <p>Our Happy Customers!!!</p>
+    </div>
+  </div>
+
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row d-flex align-items-center justify-content-between">
+      <div class="col-md-2 col-4">
+        <img class="center-block img-fluid d-block" src="assets/img/clients/mitsu.png"> </div>
+      <div class="col-md-2 col-4">
+        <img class="center-block img-fluid d-block" src="assets/img/clients/mrt.jpg"> </div>
+      <div class="col-md-2 col-4">
+        <img class="center-block img-fluid d-block" src="assets/img/clients/sit.png"> </div>
+      <div class="col-md-2 col-4">
+        <img class="center-block img-fluid d-block" src="assets/img/clients/jurong.jpg"> </div>
+      <div class="col-md-2 col-4">
+        <img class="center-block img-fluid d-block" src="assets/img/clients/mill.png"> </div>
+    </div>
+
+  </div>
+</section><!-- End Gallery Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="team" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Experience of our Team</h2>
+          <p>Our Past Experience</p>
+        </div>
+        
+
+        <div class="owl-carousel testimonials-carousel" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              30 plus Years of Experience in Project Management, Commissioning and Technical Guidance in areas of Transportation (MRT & Vehicular Tunnels), Nuclear, Oil & Gas, Refinery and Power Industries. Advisor for System & Interface design, Installation and commissioning in Multi Million Dollar Projects.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="assets/img/Team/Sanal Kumar - Managing Director.jpg" width="100" height="100" class="testimonial-img" alt="">
+            <h3>Sanal Kumar</h3>
+            <h4>Managing Director</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              
+  25 Years of Experience in Project management in communication systems and driving force for our dedicated sales team.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="assets/img/Team/Dominic- Senior Sales Manager.jpg" width="100" height="100" class="testimonial-img" alt="">
+            <h3>Dominic </h3>
+            <h4>Senior Sales Manager</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              10 Years of Experience in Process Automation and Building Automation. Conceptual design, System Architectural design,  Detailed design , Logic development and implementation.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="assets/img/Team/Karikalan - Application Manager.jpg" class="testimonial-img" width="100" height="100" alt="">
+            <h3>Karikalan</h3>
+            <h4>Application System Manager</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              15 Years of Experience in Electrical Engineering design, Project Management, Installation and Commissioning. Transportation (MRT & Vehicular Tunnels in Singapore), Metro Rail in Bangalore and Steel plants in Bhilai. 
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="assets/img/Team/Amala- Engineering Manager.jpg" width="100" height="100" class="testimonial-img" alt="">
+            <h3>Amala P.V</h3>
+            <h4>Engineering Manager</h4>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    
+<!-- ======= Chefs Section ======= -->
+<!--<section id="chefs" class="chefs">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Chefs</h2>
+      <p>Our Proffesional Chefs</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="member" data-aos="zoom-in" data-aos-delay="100">
+          <img src="assets/img/chefs/chefs-1.jpg" class="img-fluid" alt="">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Walter White</h4>
+              <span>Master Chef</span>
+            </div>
+            <div class="social">
+              <a href=""><i class="icofont-twitter"></i></a>
+              <a href=""><i class="icofont-facebook"></i></a>
+              <a href=""><i class="icofont-instagram"></i></a>
+              <a href=""><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="member" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/chefs/chefs-2.jpg" class="img-fluid" alt="">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>Sarah Jhonson</h4>
+              <span>Patissier</span>
+            </div>
+            <div class="social">
+              <a href=""><i class="icofont-twitter"></i></a>
+              <a href=""><i class="icofont-facebook"></i></a>
+              <a href=""><i class="icofont-instagram"></i></a>
+              <a href=""><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="member" data-aos="zoom-in" data-aos-delay="300">
+          <img src="assets/img/chefs/chefs-3.jpg" class="img-fluid" alt="">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>William Anderson</h4>
+              <span>Cook</span>
+            </div>
+            <div class="social">
+              <a href=""><i class="icofont-twitter"></i></a>
+              <a href=""><i class="icofont-facebook"></i></a>
+              <a href=""><i class="icofont-instagram"></i></a>
+              <a href=""><i class="icofont-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section> -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+      </div>
+
+      
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Location:</h4>
+                <p>50 Bukit Batok St 23,<br>
+                  #08-05 Midview Building,<br>
+                  Singapore<br>
+                  659578</p>
+              </div>
+
+              <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4>Call:</h4>
+                <a href="tel:+6596710410"><p>Mobile:+65 9671 0410</p>
+                <a href="tel:+6563166231"><p>Tel   :+65 6316 6231</p>
+                <a href="fax:+6563166348"><p>Fax   :+65 6316 6348</p>
+              </div>
+
+              <!--<div class="open-hours">
+                <i class="icofont-clock-time icofont-rotate-90"></i>
+                <h4>Open Hours:</h4>
+                <p>
+                  Monday-Saturday:<br>
+                  11:00 AM - 23:00 PM
+                </p>
+              </div>-->
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <a href="mailto:sanal@unifabtech.com"><p>sanal@unifabtech.com</p></a>
+              </div>
+
+             
+
+            </div>
+
+          </div>
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <div class="d-none d-sm-block" data-aos="fade-up">
+              <iframe style="border:0; width: 750px; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7977.456053225555!2d103.756902!3d1.3395!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4013e67fa567252d!2sUnifab%20Technologies!5e0!3m2!1sen!2sus!4v1593637091756!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="d-sm-none" data-aos="fade-up">
+              <iframe style="border:0; width: 400px; height: 250px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7977.456053225555!2d103.756902!3d1.3395!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4013e67fa567252d!2sUnifab%20Technologies!5e0!3m2!1sen!2sus!4v1593637091756!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+<footer id="footer">
+    <!--<div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Restaurantly</h3>
+              <p>
+                A108 Adam Street <br>
+                NY 535022, USA<br><br>
+                <strong>Phone:</strong> +1 5589 55488 55<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+         
+
+        </div>
+      </div>
+    </div>-->
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Unifab Technologies Pvt Ltd</span></strong>. All Rights Reserved
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/timeline.js"></script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5efdc5919e5f69442291ba98/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+</html>
